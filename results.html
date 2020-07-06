@@ -4,10 +4,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link type="text/css" rel="stylesheet" href="results.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <title>نتيجة الطالب </title>
 </head>
 <body>
   <div class="container">
+    <div class="alert alert-danger " style="text-align: right; display: none;" id="alert-name" >
+      <strong  >
+        يا 
+    <span style="text-decoration: underline;font-size: 30;">عمرية 
+     </span>
+     انتا جبت 47 بالامتحان الثاني بدون البونوص فلازم  تهتم بالآتي 
+     </strong >
+     <i><h4 style="color:red">لازم صباح الامتحان تقرأ الأحاديث والآيات من الكتاب عشان الحركات 
+    <h4 style="color:green"> لازم تركز وانتا بتنقل الاجابة دفتر الاجابة _
+               </h4> </h4></i>
+            
+    </div>
     <p>
       <img src="logo.jpg"  align="right" width="140px">
     <h2 style="text-align: center; padding-top: 50px;"> الاسم : <b style="color: blue;">أسامة مصباح الرمحي </b></h2>
@@ -58,10 +71,11 @@
   </div>
   
 </body>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 <script>
    
   document.addEventListener('DOMContentLoaded',checkloggedin);
-  
+  $('#alert-name').show(4000)
   function checkloggedin(e)
   {
     e.preventDefault()
