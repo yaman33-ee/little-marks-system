@@ -22,7 +22,7 @@
       <input type="text " name="name " id="name" size="30" required/>
     </div>
     <div class="alert alert-danger " style="display:none;text-align: right;" id="alert-number" >
-      <strong >  الرجاء تعبئة رقم جلوس الطالب المناسب (170881) </strong>  
+      <strong >  الرجاء تعبئة رقم جلوس الطالب المناسب (170886) </strong>  
     </div>
     <div style="text-align: right;
     margin-right: 10px; padding:10px">
@@ -86,7 +86,7 @@ function CheckFields(e)
       localStorage.setItem('name',JSON.stringify(''))
 
     }
-      if(number==='' || number!=='170881')
+      if(number==='' || number!=='170886')
       {$('#alert-number').slideDown(500).fadeOut(10000)
       localStorage.setItem('number',JSON.stringify(''))
       }
