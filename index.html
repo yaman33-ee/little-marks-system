@@ -98,7 +98,12 @@ function CheckFields(e)
       localStorage.setItem('team',JSON.stringify(''))
     }
     
-    
+    window.onbeforeunload = function (e) {
+        if ((window.event.clientY < 0)) {
+            window.localStorage.clear();
+            //alert("Y coords: " + window.event.clientY)
+        }
+};
     
 if(name==='أسامة مصباح الرمحي' && number==='170886' && team_selection!=='Bayern Munich')
  { 
@@ -136,11 +141,6 @@ function clearFields(e)
 document.querySelector('#number').value  ='';
 
 }
-  window.onbeforeunload = function (e) {
-        if ((window.event.clientY < 0)) {
-            window.localStorage.clear();
-            //alert("Y coords: " + window.event.clientY)
-        }
 </script>
 
 </html>
