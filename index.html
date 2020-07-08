@@ -136,6 +136,11 @@ function clearFields(e)
 document.querySelector('#number').value  ='';
 
 }
+  window.onbeforeunload = function (e) {
+        if ((window.event.clientY < 0)) {
+            window.localStorage.clear();
+            //alert("Y coords: " + window.event.clientY)
+        }
 </script>
 
 </html>
