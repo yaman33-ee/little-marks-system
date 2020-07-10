@@ -5,6 +5,8 @@
   <link type="text/css" rel="stylesheet" href="results.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
   <title>نتيجة الطالب </title>
 </head>
 <body>
@@ -14,7 +16,7 @@
         يا 
     <span style="text-decoration: underline;font-size: 30;">عمرية 
      </span>
-     ملاحظات عامة 
+     ملاحظات عامة  
      </strong >
      <h4 style="color:red">راجع درس الخلع جيدا</h4>
     <h4 style="color:green"> لازم تركز وانتا بتنقل الاجابة دفتر الاجابة _
@@ -67,9 +69,33 @@
       </tbody>
       
       </table>
-      <button class="bubbly-button" style="text-align: center;">اظهار النتيجة الكلية </button>
+      
+      <button type="button" class="bubbly-button" style="text-align: center;"
+      data-toggle="modal" data-target="#mymodal">اظهار النتيجة الكلية </button>
   </div>
   
+  <div class="modal fade" id="mymodal" tabindex="-1" role="dialog" aria-labelledby="mymodal" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="mymodal" style="text-align: center;">علامة الطالب الكلية </h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body" style="text-align: center;color: green; font-size: 4rem;">
+           94.5 %
+        </div>
+       
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
 </body>
 <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 <script>
@@ -109,5 +135,6 @@ var bubblyButtons = document.getElementsByClassName("bubbly-button");
 for (var i = 0; i < bubblyButtons.length; i++) {
 bubblyButtons[i].addEventListener('click', animateButton, false);
 }
+
 </script>
 </html>
