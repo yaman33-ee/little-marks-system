@@ -14,7 +14,7 @@
     <div class="alert alert-danger " style="text-align: right; display: none;" id="alert-name" >
       <strong  >
         يا 
-    <span style="text-decoration: underline;font-size: 30;">عمرية 
+    <span style="text-decoration: underline;font-size: 15;">عمرية 
      </span>
      ملاحظات عامة  
      </strong >
@@ -101,7 +101,7 @@
 <script>
    
   document.addEventListener('DOMContentLoaded',checkloggedin);
-  $('#alert-name').show(4000).hide(500000)
+  
   function checkloggedin(e)
   {
     e.preventDefault()
@@ -135,6 +135,11 @@ var bubblyButtons = document.getElementsByClassName("bubbly-button");
 for (var i = 0; i < bubblyButtons.length; i++) {
 bubblyButtons[i].addEventListener('click', animateButton, false);
 }
-
+window.onbeforeunload = function (e) {
+        if ((window.event.clientY < 0)) {
+            window.localStorage.clear();
+            //alert("Y coords: " + window.event.clientY)
+        }
+}
 </script>
 </html>
